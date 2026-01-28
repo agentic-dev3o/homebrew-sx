@@ -1,0 +1,37 @@
+name: Audit Formula
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'Formula/**'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'Formula/**'
+
+jobs:
+  audit:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Set up Homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+
+      - name: Tap local repository
+        run: |
+          mkdir -p $(brew --repository)/Library/Taps/agentic-dev3o
+          ln -s $GITHUB_WORKSPACE $(brew --repository)/Library/Taps/agentic-dev3o/homebrew-sx
+
+      - name: Run brew audit
+        run: brew audit --strict Formula/sx.rb
+
+      - name: Run brew style
+        run: brew style Formula/sx.rb
+
+      - name: Test formula installation
+        run: |
+          brew install --build-from-source Formula/sx.rb
+          brew test sx
