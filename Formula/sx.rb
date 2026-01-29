@@ -4,8 +4,8 @@
 class Sx < Formula
   desc "Sandbox shell sessions with macOS Seatbelt"
   homepage "https://github.com/agentic-dev3o/sandbox-shell"
-  url "https://github.com/agentic-dev3o/sandbox-shell/archive/refs/tags/v0.2.2.tar.gz"
-  sha256 "8d84a2348adad888110c3c557704406e16672e21c359ea75100a85e4913c7928"
+  url "https://github.com/agentic-dev3o/sandbox-shell/archive/refs/tags/v0.2.5.tar.gz"
+  sha256 "d0f8eff8146ba05af473275b2e9f04e0f90051469bb686b4d72de85fbbe7b640"
   license "MIT"
   head "https://github.com/agentic-dev3o/sandbox-shell.git", branch: "main"
 
