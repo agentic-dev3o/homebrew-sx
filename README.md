@@ -1,6 +1,6 @@
 # Homebrew Tap for sx
 
-This is a [Homebrew](https://brew.sh) tap for [sx](https://github.com/agentic-dev3o/sx), a CLI that wraps shell sessions in macOS Seatbelt sandboxes.
+This is a [Homebrew](https://brew.sh) tap for [sx](https://github.com/agentic-dev3o/sandbox-shell), a CLI that wraps shell sessions in macOS Seatbelt sandboxes.
 
 ## Requirements
 
@@ -39,4 +39,4 @@ xcode-select --install
 
 ### Issues
 
-Report issues at: https://github.com/agentic-dev3o/sx/issues
+Report issues at: https://github.com/agentic-dev3o/sandbox-shell/issues

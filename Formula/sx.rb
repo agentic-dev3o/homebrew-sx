@@ -3,11 +3,11 @@
 
 class Sx < Formula
   desc "Sandbox shell sessions with macOS Seatbelt"
-  homepage "https://github.com/agentic-dev3o/sx"
-  url "https://github.com/agentic-dev3o/sx/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "PLACEHOLDER_SHA256_WILL_BE_UPDATED_BY_RELEASE_WORKFLOW"
+  homepage "https://github.com/agentic-dev3o/sandbox-shell"
+  url "https://github.com/agentic-dev3o/sandbox-shell/archive/refs/tags/v0.2.2.tar.gz"
+  sha256 "8d84a2348adad888110c3c557704406e16672e21c359ea75100a85e4913c7928"
   license "MIT"
-  head "https://github.com/agentic-dev3o/sx.git", branch: "main"
+  head "https://github.com/agentic-dev3o/sandbox-shell.git", branch: "main"
 
   # macOS only - Seatbelt is not available on Linux
   depends_on :macos
@@ -32,7 +32,7 @@ class Sx < Formula
       Initialize project config:
         sx --init                           # Creates .sandbox.toml
 
-      Documentation: https://github.com/agentic-dev3o/sx
+      Documentation: https://github.com/agentic-dev3o/sandbox-shell
     EOS
   end
 
