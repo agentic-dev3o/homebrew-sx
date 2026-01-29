@@ -20,18 +20,13 @@ jobs:
       - name: Set up Homebrew
         uses: Homebrew/actions/setup-homebrew@master
 
-      - name: Tap local repository
-        run: |
-          mkdir -p $(brew --repository)/Library/Taps/agentic-dev3o
-          ln -s $GITHUB_WORKSPACE $(brew --repository)/Library/Taps/agentic-dev3o/homebrew-sx
-
       - name: Run brew audit
-        run: brew audit --strict Formula/sx.rb
+        run: brew audit --strict sx
 
       - name: Run brew style
-        run: brew style Formula/sx.rb
+        run: brew style sx
 
       - name: Test formula installation
         run: |
-          brew install --build-from-source Formula/sx.rb
+          brew install --build-from-source sx
           brew test sx
