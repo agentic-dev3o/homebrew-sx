@@ -6,12 +6,10 @@ class Sx < Formula
   homepage "https://github.com/agentic-dev3o/sandbox-shell"
   license "MIT"
 
-  on_arm do
+  if Hardware::CPU.arm?
     url "https://github.com/agentic-dev3o/sandbox-shell/releases/download/v0.2.7/sx-0.2.7-aarch64-apple-darwin.tar.gz"
     sha256 "546aeed550b6d79b521beadf2b41a66b493cd8b6ef007a6d4d9c9c1c6f527e2a"
-  end
-
-  on_intel do
+  else
     url "https://github.com/agentic-dev3o/sandbox-shell/releases/download/v0.2.7/sx-0.2.7-x86_64-apple-darwin.tar.gz"
     sha256 "3f20cd82c71a4f97179b5fe7434d900f93abc2618bc22983e9ccb43aa35126a0"
   end
