@@ -4,7 +4,6 @@
 class Sx < Formula
   desc "Sandbox shell sessions with macOS Seatbelt"
   homepage "https://github.com/agentic-dev3o/sandbox-shell"
-  version "0.2.6"
   license "MIT"
 
   on_arm do
