@@ -4,16 +4,23 @@
 class Sx < Formula
   desc "Sandbox shell sessions with macOS Seatbelt"
   homepage "https://github.com/agentic-dev3o/sandbox-shell"
-  url "https://github.com/agentic-dev3o/sandbox-shell/archive/refs/tags/v0.2.5.tar.gz"
-  sha256 "d0f8eff8146ba05af473275b2e9f04e0f90051469bb686b4d72de85fbbe7b640"
+  version "0.2.5"
   license "MIT"
-  head "https://github.com/agentic-dev3o/sandbox-shell.git", branch: "main"
 
-  depends_on "rust" => :build
+  on_arm do
+    url "https://github.com/agentic-dev3o/sandbox-shell/releases/download/v0.2.5/sx-0.2.5-aarch64-apple-darwin.tar.gz"
+    sha256 "5c1857892aa9d5ae3f4b9780505091bb0c638d30cc6ac814a06d37e15b73b5ea"
+  end
+
+  on_intel do
+    url "https://github.com/agentic-dev3o/sandbox-shell/releases/download/v0.2.5/sx-0.2.5-x86_64-apple-darwin.tar.gz"
+    sha256 "ba95f6ad2c7be883bf8e1dfc588d859e5d2c372eb88bd73e3e1a59aaec04c172"
+  end
+
   depends_on :macos
 
   def install
-    system "cargo", "install", *std_cargo_args
+    bin.install "sx"
   end
 
   def caveats
