@@ -9,11 +9,8 @@ class Sx < Formula
   license "MIT"
   head "https://github.com/agentic-dev3o/sandbox-shell.git", branch: "main"
 
-  # macOS only - Seatbelt is not available on Linux
-  depends_on :macos
-
-  # Rust toolchain for building from source
   depends_on "rust" => :build
+  depends_on :macos
 
   def install
     system "cargo", "install", *std_cargo_args
