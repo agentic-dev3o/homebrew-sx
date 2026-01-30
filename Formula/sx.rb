@@ -18,6 +18,7 @@ class Sx < Formula
 
   def install
     bin.install "sx"
+    (share/"sx").install Dir["shell/*"]
   end
 
   def caveats
@@ -25,13 +26,21 @@ class Sx < Formula
       sx restricts filesystem and network access using macOS Seatbelt.
 
       Quick start:
-        sx -- echo "sandboxed command"      # Run command in sandbox
+        sx -- echo "sandboxed"              # Run in sandbox
         sx rust -- cargo build              # Use rust profile
-        sx online node -- npm install       # Allow network access
-        sx -n -- node app.js                # Dry-run (preview sandbox rules)
+        sx online -- npm install            # Allow network
 
-      Initialize project config:
-        sx --init                           # Creates .sandbox.toml
+      Shell integration (optional, add to your shell config):
+        # Zsh (~/.zshrc)
+        source #{share}/sx/sx.zsh
+
+        # Bash (~/.bashrc)
+        source #{share}/sx/sx.bash
+
+        # Fish
+        cp #{share}/sx/sx.fish ~/.config/fish/conf.d/
+
+      Provides: prompt indicator, tab completion, aliases (sxo, sxl, sxr, sxc)
 
       Documentation: https://github.com/agentic-dev3o/sandbox-shell
     EOS
