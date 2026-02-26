@@ -7,11 +7,11 @@ class Sx < Formula
   license "MIT"
 
   if Hardware::CPU.arm?
-    url "https://github.com/agentic-dev3o/sandbox-shell/releases/download/v0.3.0/sx-0.3.0-aarch64-apple-darwin.tar.gz"
-    sha256 "7a8a62ffade4870aae20428fbd857e7fc3d337b3e77f05fc94e1b7aab89c2359"
+    url "https://github.com/agentic-dev3o/sandbox-shell/releases/download/v1.0.0/sx-1.0.0-aarch64-apple-darwin.tar.gz"
+    sha256 "b54d03d792159b26fb75ddb07fba9a5d3e53d41f6a78e2fd29dac54f6ece67b0"
   else
-    url "https://github.com/agentic-dev3o/sandbox-shell/releases/download/v0.3.0/sx-0.3.0-x86_64-apple-darwin.tar.gz"
-    sha256 "dfd4579022af87e4788a56c5e10a407d945c866e7f614b1c63b484da76cddd0e"
+    url "https://github.com/agentic-dev3o/sandbox-shell/releases/download/v1.0.0/sx-1.0.0-x86_64-apple-darwin.tar.gz"
+    sha256 "0539922917bdaae98a2546d74645532b04706c13316e2d6624ff939087e018f3"
   end
 
   depends_on :macos
